@@ -1,0 +1,38 @@
+h1{
+  color:red;
+}
+
+img {
+  width: 400px;
+  display: inline-block;
+}
+
+p{
+  display: inline-block;
+}
+
+#prompt{
+  display: visible;
+}
+
+.turtle p{
+  display: none;
+}
+.turtle img{
+  display: none;
+}
+.snake p{
+  display: none;
+}
+
+.snake img{
+  display: none;
+}
+
+.insect p{
+  display: none;
+}
+
+.insect img{
+  display: none;
+}
