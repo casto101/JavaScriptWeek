@@ -1,0 +1,18 @@
+body{
+
+}
+
+.red{
+    color: red;
+    font-size: 25px;
+}
+.blue{
+    color: blue;
+    font-size: 25px;
+}
+
+.number{
+  font-style: italic;
+  font-size: 25px;
+  font-weight: bold;
+}
