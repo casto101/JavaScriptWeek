@@ -1,0 +1,62 @@
+header{
+  text-align: center;
+}
+.task-list {
+  width: 250px;
+  float: left;
+  margin: 0 5px;
+  background-color: #e3e3e3;
+  min-height: 240px;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.task-list input, .task-list textarea {
+  width: 220px;
+  margin: 1px 5px;
+}
+
+.task-list input {
+  height: 30px;
+}
+
+.todo-task {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 220px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.task-list button {
+  width: 100px;
+  margin: 5px;
+}
+
+p .todo-task{
+  float: left;
+}
+button .todo-task{
+  float: right;
+}
+
+button.move-to-complete {
+  width: 45%;
+  text-align: center;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+#completed .move-to-complete{
+  visibility: collapse;
+}
+button.delete-task {
+  width: 45%;
+  text-align: center;
+  border-color: #2e6da4;
+}
+
+.button-holder{
+  float: right;
+}
