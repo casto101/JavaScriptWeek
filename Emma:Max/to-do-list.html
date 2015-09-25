@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+  <link type="text/css" rel="stylesheet" href="css/to-do-list.css">
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/to-do-list.js"></script>
+<title>To Do List</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="col-md-12">
+      <h1>My To Do List</h1>
+    </header>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="task-list" id="to-do">
+          <h2>To Do</h2>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="task-list" id="completed">
+          <h2>Completed</h2>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="task-list" id="to-do-input">
+          <h2>Add a task</h2>
+          <form id="todo-form">
+            <input type="text" placeholder="Task" autofocus/>
+            <button class="btn btn-primary">Add Task</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

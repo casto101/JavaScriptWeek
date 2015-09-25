@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Choice is Yours</title>
+  <style>
+    h1{
+      color: #75C9E6;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+    body {
+      background-color: #A5B1B5;
+    }
+  </style>
+  <script>
+    function updateHeader(){
+      var newHeader=document.getElementById("myTextBox").value;
+      var oldHeader=document.getElementById("header");
+      var revert=oldHeader.innerHTML;
+
+      if(confirm("Are you sure you wish to change the header?")){
+        oldHeader.innerHTML=newHeader.fontcolor("#DC6841");
+        var userAnswer=confirm("Do you like the new header?");
+        if(userAnswer== true){
+        }
+        else{
+            oldHeader.innerHTML=revert;
+            alert("We have returned to the original header.");
+        }
+      }
+  }
+  </script>
+</head>
+<body>
+<h1 id="header"> Make A Choice</h1>
+  <input type ="text" id="myTextBox"/>
+  <input type ="button" value="Update Text" onclick="updateHeader()"/>
+<br><br>
+<img src="http://www.packsize.com/wp-content/uploads/2015/06/morpheus-with-pills.png" alt="Matrix"/>
+</body>
+</html>

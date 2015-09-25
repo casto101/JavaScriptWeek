@@ -1,0 +1,93 @@
+#Paradiso{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("http://hdw.datawallpaper.com/nature/tropical-paradise-320420.jpg");
+}
+
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 30px;
+  color: rgb(99,96,93);
+  background-color: rgba(229, 225, 230, 0.6);
+  background-size: 100% 100%;
+}
+body{
+  background-color: rgba(229, 225, 230, 0.6);
+}
+
+.amenities{
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: rgb(99,96,93);
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+.thumbnail img {
+  min-width: 98%;
+  min-height: 80%;
+  overflow: hidden;
+}
+
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #337ab7;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #333;
+}
+
+.btn-primary {
+  background-image: none;
+  border-color:rgb(99,96,93);
+  background-color: rgb(99,96,93);
+
+}
+#Paradiso .btn-primary{
+  background-color: rgb(182,172,164);
+  border-color: rgb(182,172,164);
+}
+#Paradiso .btn-primary:hover {
+  background-color: rgb(99,96,93);
+}
+
+.btn-primary:hover {
+  background-color: rgb(182,172,164);
+  border-color:rgb(99,96,93);
+  color:rgb(229, 225, 230);
+}
+
+.activities {
+  text-align: center;
+}
+
+.activities p{
+  font-size: 1.5vw;
+}
+footer{
+  text-align: center;
+}
+footer ul{
+  list-style-type: none;
+  text-align: center;
+}

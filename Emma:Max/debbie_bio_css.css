@@ -1,0 +1,23 @@
+<style type="text/css">
+html, body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+body {
+  background-color: #F6E3F9;
+  font-family: Arial, sans-serif;
+}
+table {
+  background-color: #B7F2BF;
+  font-family: Courier;
+  font-style: strong;
+  font-size: 22;
+}
+thead {
+  text-align: center;
+  font-family: Arial;
+  font-size: 12;
+  width: 20;
+}
+</style>
