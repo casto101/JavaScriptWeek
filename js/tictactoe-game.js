@@ -1,30 +1,28 @@
 var f0, f1, f2, f3, f4, f5, f6, f7, f8;
-var currentPlayer = "O";
+
+img1 = new Image();
+img2 = new Image();
+img1.src = "tic-tac-toe-X.png";
+img2.src = "tic-tac-toe-O.png";
 
 $(document).ready(function(){
 
-
-  //    var playerOName = prompt("What's your name, Player 2?");
-//  });
-  //var playerX = prompt("What's your name, Player 1?").text
+  var nextPlayer = "X";
+  var currentPlayer = "O";
 
   var ximage = "<img class='imgx' src='tic-tac-toe-X.png' data-value='X'/>";
   var oimage = "<img class='imgo' src='tic-tac-toe-O.png' data-value='O'/>";
 
-  $(function(){
+  var initiate = function(){
       playerXName = prompt("What's your name, Player 1?");
-      //alert("Hi, " + playerXName + "!");
       playerOName = prompt("What's your name, Player 2?");
-    //  alert("Hi, " + playerOName + "!");
       alert("It's your turn, " + playerXName);
-    });
+    };
+  initiate();
 
-  var markerWins = function (id0, id1, id2){
-    if(id0 == id1 && id1 == id2 && id2 == currentPlayer){
+  var markerWins = function (id0, id1, id2, marker){
+    if(id0 == id1 && id1 == id2 && id2 == marker){
       return true;
-    }
-    else{
-      return false;
     };
   };
 
@@ -40,25 +38,25 @@ $(document).ready(function(){
     f8 = $("#field8").children("img").data("value");
   };
 
-
   function playerXClick (x) {
     x.append(ximage);
     x.off();
     x.removeClass("empty");
-    alert("It's your turn, " + playerOName);
   };
 
   function playerOClick (o) {
     o.append(oimage);
     o.off();
     o.removeClass("empty");
-    alert("It's your turn, " + playerXName);
   };
 
   function checkEmpty(){
-    var hasEmpty = $("table").find('.empty');
-    if(hasEmpty.hasClass('empty') == false){ // .hasEmpty() returns BOOLEAN true/false
+    var hasEmpty = $("table").find('.empty');// .hasEmpty() returns BOOLEAN true/false
+    if(hasEmpty.hasClass('empty') == false){ //if there NO '.empty' values in the table
       alert("Stalemate! Everyone gets a trophy!");
+    }
+    else{
+      alert("It's your turn, " + playerOName);
     };
   };
 
@@ -66,30 +64,46 @@ $(document).ready(function(){
     var classBox = $(this);
       if (currentPlayer == "O"){
         playerXClick (classBox);
-        currentPlayer = "X";
+        loadBoxes();
+
+
+        if (markerWins(f0, f1, f2, nextPlayer)
+           || markerWins(f3, f4, f5, nextPlayer)
+           || markerWins(f6, f7, f8, nextPlayer)
+           || markerWins(f2, f4, f6, nextPlayer)
+           || markerWins(f0, f4, f8, nextPlayer)
+           || markerWins(f3, f0, f6, nextPlayer)
+           || markerWins(f1, f4, f7, nextPlayer)
+           || markerWins(f2, f8, f5, nextPlayer)){
+           alert(nextPlayer + " wins!");
+         }
+        else{
+          checkEmpty();
+        };
+      currentPlayer = "X";
+//      alert(currentPlayer + "currentPlayer");
+      nextPlayer = "O";
       }
-      else{
+      else {
         playerOClick (classBox);
+        loadBoxes();
+        if (markerWins(f0, f1, f2, nextPlayer)
+           || markerWins(f3, f4, f5, nextPlayer)
+           || markerWins(f6, f7, f8, nextPlayer)
+           || markerWins(f2, f4, f6, nextPlayer)
+           || markerWins(f0, f4, f8, nextPlayer)
+           || markerWins(f3, f0, f6, nextPlayer)
+           || markerWins(f1, f4, f7, nextPlayer)
+           || markerWins(f2, f8, f5, nextPlayer)){
+           alert(nextPlayer + " wins!");
+        }
+        else{
+          alert("It's your turn, " + playerXName);
+        };
+
         currentPlayer = "O";
-      };
-      loadBoxes();
-
-     if (markerWins(f0, f1, f2, currentPlayer)
-        || markerWins(f3, f4, f5, currentPlayer)
-        || markerWins(f6, f7, f8, currentPlayer)
-        || markerWins(f2, f4, f6, currentPlayer)
-        || markerWins(f0, f4, f8, currentPlayer)
-        || markerWins(f3, f0, f6, currentPlayer)
-        || markerWins(f1, f4, f7, currentPlayer)
-        || markerWins(f2, f8, f5, currentPlayer))
-        {
-        alert(currentPlayer + " wins!");
-      }
-    else{
-      checkEmpty();
+    //    alert("currentPlayer" + currentPlayer);
+        nextPlayer = "X";
     };
-
-
   });
 });
-//winningArray = [(f0,f1,f2), (f3,f4,f5), (field6==field7==field8),(field2==field4==field6),(field0==field4==field8),(field0==field3==field6),(field1==field4==field7),(field2==field5==field8)]
